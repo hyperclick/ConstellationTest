@@ -1,0 +1,13 @@
+todo:
+click to tour and show details
+show tours as grid
+make tours view as on example
+add IoC
+inject ToursRepository to controller
+
+done:
+add Tours controller
+add Tours view
+add Tours model
+add ToursRepository
+load tours data from CDN
