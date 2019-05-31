@@ -1,0 +1,32 @@
+﻿@model ConstellationTest.Models.Tours
+@using ConstellationTest.Models; 
+
+@helper RawText(string s)
+{
+    @(new HtmlString(s))
+}
+
+@{
+    Layout = null;
+    void RenderTour(Tour t)
+    {
+        RawText("<>");
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div id="tours_list"> 
+        @foreach (var t in Model.List)
+        {
+            Html.RenderPartial("Tour", t);
+        }
+    </div>
+</body>
+</html>

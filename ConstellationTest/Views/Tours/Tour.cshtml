@@ -1,0 +1,17 @@
+﻿@model ConstellationTest.Models.Tour
+
+@{
+string GetPhotoUrl()
+{
+return  Model.photoCard?.thumbnail ?? Model.photoAlbum[0].thumbnail;
+}
+
+
+}
+<div id="@Model.id">
+    <div>@Model.header</div>
+    <div>@Model.title</div>
+    <img src="@GetPhotoUrl()" />
+    <div>@Model.periodStart - @Model.periodEnd</div>
+    <div>от @Model.minPrice р.</div>
+</div>
